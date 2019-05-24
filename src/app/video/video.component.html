@@ -1,0 +1,85 @@
+<div>
+  <app-header></app-header>
+</div>
+<!-- ##### About Us Area Start ##### -->
+<div class="about-us-area section-padding-100-0 bg-img bg-overlay" id="about">
+  <div class="row divSearch">
+    <div class="col-6 col-lg-6">
+      <form (ngSubmit)='performSearch($event)' color='primary' id='search-input' class='full-width'
+        appearance='outline'>
+        <input #searchBar matInput [(ngModel)]='searchValue' name='searchBar' class="form-control" [value]='searchValue'
+          (keyup.enter)='performSearch(searchValue)'>
+      </form>
+    </div>
+    <div class="searchIcon" (click)='performSearch(searchValue)'
+      style="background-image: url(../assets/img/search.png);">
+    </div>
+  </div>
+  <div class="row">
+    <div class="divChanson" *ngFor="let video of videos">
+      <div routerLink="/lecturevideo/{{video._id}}">
+        <div class="about-thumbnail">
+          <vg-player>
+            <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
+              <source src="{{video.urlVideo}}" type="video/mp4">
+            </video>
+          </vg-player>
+        </div>
+
+        <div class="divTitleChanteur">
+          <div class="titre">
+            <p>{{video.chanteur}}</p>
+            <p>{{video.titre}}</p>
+          </div>
+
+        </div>
+      </div>
+      <button class="btn btn-xs btn-default boutonAddPlaylist" (click)="ngxSmartModalService.getModal('myModal').open();selectVideo(video._id)">
+          <i class="fa fa-heart playlist-icon"></i>  <span> Ajouter à ma playlist</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- ##### About Us Area End ##### -->
+
+<ngx-smart-modal #myModal identifier="myModal">
+  <div>
+    <h5>Ajout playlist</h5>
+  </div>
+  <hr>
+  <div>
+    <div *ngIf="!showAddNew">
+      <select [(ngModel)]="selectedPlaylist" (change)="selected()" class="form-control">
+        <option *ngFor="let item of playlist" [ngValue]="item" class="form-control">{{item.titre}}</option>
+      </select>
+      <!-- <mat-form-field>
+            <mat-select placeholder="Playlist" (change)="selected()" [(ngModel)]="selectedPlaylist" name="playlist">
+              <mat-option *ngFor="let item of playlist" [value]="item">
+                {{item.titre}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field> -->
+      <br>
+    </div>
+
+    <div class="divAddBtn">
+      <div>
+        <button *ngIf="!showAddNew" class="btn btn-xs btn-primary btnAddNewPlaylist" (click)="showAdd()">
+          <span class="fa fa-plus" style="color:white;"></span> Nouvelle playlist
+        </button>
+        <button *ngIf="showAddNew" (click)="hideAdd()" class="btn btn-xs btn-primary btnAddNewPlaylist">
+          <span class="fa fa-minus" style="color:darkgray;"></span> Revenir à la liste
+        </button>
+      </div>
+      <div class="col-lg-6 col-6">
+        <input type="text" class="form-control inputAdd" *ngIf="showAddNew" [(ngModel)]="newPlaylist">
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div class="validateClose">
+    <button (click)="validate()" class="btn btn-xs btn-primary btnAddPlaylist">Ajouter</button>
+    <button (click)="myModal.close()" class="btn btn-xs btn-danger" style="margin-left:15px;">Fermer</button>
+  </div>
+</ngx-smart-modal>

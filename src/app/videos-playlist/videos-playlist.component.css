@@ -1,0 +1,39 @@
+.divTitleChanteur{
+    padding : 0px 10px 10px 10px;
+}
+.divTitleChanteur p{
+    color: white;
+    margin-bottom: 0;
+}
+.about-thumbnail{
+    padding: 10px;
+}
+.divChanson{
+    padding: 0 0 15px;
+    cursor: pointer;
+    background: #77889970;
+    border-radius: 5px;
+    width: 30%;
+    margin: 3px;
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 96%;
+    padding-left: 4%;
+}
+.divPlayVideo{
+    display: flex;
+}
+
+.btnPlaylist{
+    background: linear-gradient(to right,#cc1573,#5722a9);
+    margin-bottom: 8px;
+    border-radius: 0;
+    width: 300px;
+    color: #fff !important;
+    font-style: inherit;
+    font-weight: 300;
+    cursor: pointer;
+}

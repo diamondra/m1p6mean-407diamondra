@@ -1,0 +1,88 @@
+.divTitleChanteur{
+    padding : 0px 10px 10px 10px;
+}
+.divTitleChanteur p{
+    color: white;
+    margin-bottom: 0;
+}
+.about-thumbnail{
+    padding: 10px;
+}
+.divChanson{
+    padding: 0 0 15px;
+    cursor: pointer;
+    background: #77889970;
+    border-radius: 5px;
+    width: 24%;
+    margin: 3px;
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 96%;
+    padding-left: 4%;
+}
+
+.divSearch{
+    margin-bottom: 25px;
+}
+
+.divSearch input{
+    background: rgba(41, 23, 50, 0.5);
+    color: white;
+}
+
+.divSearch input:focus{
+    border-color: #6e7074;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(220, 220, 220, 0.25);
+}
+
+.searchIcon{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    cursor: pointer;
+}
+
+.playlist-icon{
+    color: #d713b6;
+    /* font-size: small;
+    transform: rotate(45deg); */
+}
+
+.titre{
+    float: left;
+    width: 90%;
+}
+
+.btnAddPlaylist, .btnAddPlaylist:hover{
+    background: darkcyan;
+    border-color: darkcyan;
+}
+
+.btnAddNewPlaylist{
+    color: #fff;
+    background-color: #4f3184;
+    border-color: #4f3184;
+}
+
+.divAddBtn{
+    display: flex;
+}
+
+.validateClose{
+    margin-left: 60%;
+}
+
+.boutonAddPlaylist{
+    background: gainsboro;
+    margin-left: 10px;
+    font-size: small;
+}
+
+.about-content h4{
+    font-size: large;
+}

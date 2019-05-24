@@ -1,0 +1,60 @@
+<ngx-ui-loader fgsSize="75" pbColor="#FFFFFF" fgsColor="#FFFFFF" overlayColor="#3e2761"></ngx-ui-loader>
+<div>
+    <app-header></app-header>
+  </div>
+  <!-- ##### About Us Area Start ##### -->
+  <div class="about-us-area section-padding-100-0 bg-img bg-overlay" id="about">
+    <div class="container" *ngIf="video">
+      <div class="row">
+        <div class="col-12">
+          <div class="sect-heading">
+            <h2><img src="../assets/img/eigen-cd-maken-minidisco.png" alt=""> La vidéo dernièrement ajoutée</h2>
+            <!-- <h6>Sed porta cursus enim, vitae maximus felis luctus iaculis.</h6> -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="about-content">
+              <h4>{{video.chanteur}} - {{video.titre}} </h4>
+              <!-- <h4>Genre : {{video.genre.nomGenre}} </h4> -->
+            </div>
+      </div>
+      <div class="row">
+        <!-- About Thumbnail -->
+        <div class="col-1 col-lg-1"></div>
+        
+        <div class="col-10 col-lg-10">
+          <div class="about-thumbnail mb-100">
+            <vg-player>
+              <vg-controls>
+                  <vg-play-pause></vg-play-pause>
+                  <vg-playback-button></vg-playback-button>
+            
+                  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+            
+                  <vg-scrub-bar>
+                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                  </vg-scrub-bar>
+            
+                  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+            
+                  <vg-mute></vg-mute>
+                  <vg-volume></vg-volume>
+            
+                  <vg-fullscreen></vg-fullscreen>
+              </vg-controls>
+            
+              <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
+                  <source src="{{video.urlVideo}}" type="video/mp4">
+              </video>
+            </vg-player>
+          </div>
+        </div>
+
+        <div class="col-1 col-lg-1"></div>
+      </div>
+    </div>
+  </div>
+  <!-- ##### About Us Area End ##### -->
+  

@@ -1,0 +1,9 @@
+.listeChanson{
+    display: -webkit-box;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.listeChanson p{
+    color: white;
+}

@@ -1,0 +1,20 @@
+<div class="album-all-songs">
+  
+  <!-- Music Playlist -->
+  <div class="music-playlist">
+    <!-- Single Song -->
+    <div class="listeChanson" (click) = "onSelect(video)" *ngFor="let video of videos">
+      <div class="about-thumbnail listVideo col-6 col-lg-6">
+        <vg-player>
+          <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
+            <source src="{{video.urlVideo}}" type="video/mp4">
+          </video>
+        </vg-player>
+      </div>
+      <div class="col-6 col-lg-6">
+        <p>{{video.titre}}</p>
+        <p>{{video.chanteur}}</p>
+      </div>
+    </div>
+  </div>
+</div> 

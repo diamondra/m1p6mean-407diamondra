@@ -1,0 +1,18 @@
+.listeChanson{
+    width: 94%;
+    margin-bottom: 20px;
+}
+
+.titreChanteur{
+    margin: 2rem;
+}
+
+.titreChanteur h5{
+    color : white;
+}
+
+.container-video{
+    width: 90% !important;
+    margin-left : 5%;
+    margin-right: 5%;
+}

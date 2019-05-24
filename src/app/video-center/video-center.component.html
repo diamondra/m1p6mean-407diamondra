@@ -1,0 +1,27 @@
+<div>
+  <app-header></app-header>
+</div>
+<!-- ##### About Us Area Start ##### -->
+<div class="about-us-area section-padding-100-0 bg-img bg-overlay" id="about">
+  <!-- ##### Featured Album Area Start ##### -->
+<div class="featured-album-area section-padding-100 clearfix">
+    <div class="container-video">
+      <div class="row">
+        <div class="col-12">
+          <div class="featured-album-content d-flex flex-wrap">
+            <!-- Album Thumbnail -->
+            <div class="col-6 col-lg-6">
+                <video-detail *ngIf="selectedVideo" [video]="selectedVideo"></video-detail>
+              </div>
+  
+            <!-- Album Songs -->
+            <div class="album-songs h-100 col-6 col-lg-6">  
+              <video-list [videos]="videos" (SelectVideo)="onSelectVideo($event)"></video-list> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ##### Featured Album Area End ##### -->
+</div>

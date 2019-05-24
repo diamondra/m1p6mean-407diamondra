@@ -1,0 +1,47 @@
+<!-- ##### About Us Area Start ##### -->
+<div class="about-us-area bg-img bg-overlay" id="about">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin">
+            <div class="card-body">
+              <h5 class="card-title text-center">Merci de vous connecter</h5>
+              <hr>
+              <h6 *ngIf="error" class="erreur">!{{error}}</h6>
+              <form class="form-signin" (ngSubmit)="submit()">
+                  <div class="form-label-group">
+                      <label for="firstname">Nom</label>
+                    <input type="text" id="firstname" class="form-control fieldAuth" [ngModelOptions]="{standalone: true}" [(ngModel)]="model.firstname" placeholder="Votre nom" required autofocus>
+                    
+                  </div>
+                  <div class="form-label-group">
+                      <label for="lastname">Prénom</label>
+                    <input type="text" id="lastname" class="form-control fieldAuth" [ngModelOptions]="{standalone: true}" [(ngModel)]="model.lastname" placeholder="Votre prénom" required autofocus>
+                    
+                  </div>
+                <div class="form-label-group">
+                    <label for="pseudo">Pseudo</label>
+                  <input type="text" id="pseudo" class="form-control fieldAuth" [ngModelOptions]="{standalone: true}" [(ngModel)]="model.pseudo" placeholder="Votre pseudo" required autofocus>
+                  
+                </div>
+    
+                <div class="form-label-group">
+                    <label for="mdp">Mot de passe</label>
+                  <input type="password" id="mdp" class="form-control fieldAuth"  [(ngModel)]="model.mdp" placeholder="Votre mot de passe" [ngModelOptions]="{standalone: true}" required>
+                  
+                </div>
+    
+                <div>
+                  <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase btnAuth" type="submit">S'inscrire</button>
+                </div>
+                
+                <hr>
+                <div><p class="pasMembre">Déjà membre ? </p></div>
+                <button routerLink ="/" class="btn btn-lg btn-primary btn-block text-uppercase btnRegister" type="submit">Connectez-vous</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

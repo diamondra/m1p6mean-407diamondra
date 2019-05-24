@@ -1,0 +1,11 @@
+.title{
+    color: #bd177a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 300px;
+}
+.btnLogout{cursor: pointer;}
+
+.vidé{
+    margin-left: 10px;
+    color: whitesmoke;
+}
