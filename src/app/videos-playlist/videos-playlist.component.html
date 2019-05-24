@@ -12,10 +12,17 @@
     <div class="searchIcon" (click)='performSearch(searchValue)' style="background-image: url(../assets/img/search.png);">
     </div>
   </div> -->
-  <div class="col-lg-12 col-12">
+  <div class="row col-lg-12 col-12">
+      <div class="col-lg-3 col-3">
+          <div *ngFor="let play of playlists">
+            <div class="buy-tickets">
+              <a (click)="changePlay(play._id)" class="btn btn-xs btn-default btnPlaylist">{{play.titre}}</a>
+            </div>
+          </div>
+        </div>
     <div class="col-lg-9 col-9" *ngIf="playlist">
-     <div class="divPlayVideo">
-      <div class="col-lg-3 col-3 divChanson" routerLink="/lecturevideo/{{video._id}}" *ngFor="let video of playlist.videos">
+     <div class="row divPlayVideo">
+      <div class="divChanson" routerLink="/lecturevideo/{{video._id}}" *ngFor="let video of playlist.videos">
         <div class="about-thumbnail">
           <vg-player>
             <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
@@ -29,13 +36,6 @@
         </div>
       </div>
      </div>
-    </div>
-    <div class="col-lg-3 col-3">
-      <div *ngFor="let play of playlists">
-        <div class="buy-tickets">
-          <a (click)="changePlay(play._id)" class="btn btn-xs btn-default btnPlaylist">{{play.titre}}</a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
