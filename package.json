@@ -36,7 +36,7 @@
     "jwt-decode": "^2.2.0",
     "mat-video": "^2.6.0",
     "mongodb": "^3.2.4",
-    "mongoose": "^5.1.7",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "ngx-smart-modal": "^7.1.1",
     "ngx-spinner": "^7.1.4",
